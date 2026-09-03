@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haosen Cao – Curriculum Vitae</title>
+  <!-- Academic CV for PhD applications, and the only CV maintained for that purpose.
+       The Chinese counterpart cv-chinese.html was retired Aug 18 2026 (U.S. programs do not
+       read it); the retired copy and the shorter job resumes remain in ../html/ and are not
+       maintained here. Exported to "Haosen Cao - CV.pdf" — re-export after any edit.
+       Facts are sourced from USC Transcript.pdf (M.S. Computer Science, cumulative GPA 3.73),
+       UCD Transcript.pdf (admitted Fall 2020, UC GPA 3.542, Japanese minor), and the live arXiv
+       record for 2603.17445 (v5, revised 2026-08-01).
+       Figwork and Mobvoi internal metrics are company-confidential — keep them qualitative. -->
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: #111;
+      line-height: 1.4;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+    }
+    .page {
+      max-width: 800px;
+      margin: 16px auto;
+      padding: 28px 32px 36px;
+      background: #fff;
+    }
+
+    /* ── Header ── */
+    .cv-header {
+      border-bottom: 2px solid #111;
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: 26px;
+      margin: 0 0 4px;
+      letter-spacing: 0.3px;
+    }
+    .cv-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+    .cv-label .updated {
+      text-transform: none;
+      letter-spacing: 0;
+      color: #888;
+      font-style: italic;
+      margin-left: 8px;
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 20px;
+      font-size: 12.2px;
+      color: #444;
+      margin-top: 6px;
+    }
+    .contact a { color: #444; text-decoration: none; border-bottom: 1px dotted #aaa; }
+    .contact span { display: inline-flex; align-items: center; gap: 6px; }
+    .contact span::before { content: "·"; font-size: 14px; color: #aaa; }
+    .contact span:first-child::before { display: none; }
+
+    /* ── Sections ── */
+    section { margin-top: 20px; }
+    h2 {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #111;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 3px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    /* ── Entries ── */
+    .entry { margin-bottom: 14px; }
+    .entry:last-child { margin-bottom: 0; }
+    h3 {
+      font-size: 13.5px;
+      margin: 0 0 2px;
+      color: #111;
+    }
+    .meta {
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+      color: #555;
+      font-size: 11.8px;
+      margin-bottom: 4px;
+    }
+    .meta-right {
+      margin-left: auto;
+      white-space: nowrap;
+      font-style: italic;
+    }
+    .role {
+      font-style: italic;
+      color: #444;
+    }
+
+    /* ── Bullets ── */
+    ul {
+      margin: 4px 0 0;
+      padding-left: 20px;
+    }
+    li {
+      font-size: 12.5px;
+      margin: 3px 0;
+      line-height: 1.45;
+    }
+    li + li { margin-top: 4px; }
+
+    /* ── Sub-strands within an entry ── */
+    .strand { margin-top: 9px; }
+    .strand-title {
+      font-size: 10.3px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+      color: #333;
+      margin-bottom: 1px;
+    }
+    .strand ul { margin-top: 3px; }
+
+    /* ── Research interests ── */
+    .interests {
+      font-size: 12.8px;
+      color: #222;
+      line-height: 1.6;
+    }
+    .interests span {
+      display: inline-block;
+      margin-right: 4px;
+    }
+    .interests span + span::before {
+      content: "·";
+      margin-right: 8px;
+      color: #999;
+    }
+
+    /* ── Skills grid ── */
+    .skill-row { font-size: 12.5px; margin: 3px 0; }
+    .skill-row b { color: #222; }
+
+    /* ── Desc paragraph ── */
+    .desc {
+      font-size: 12.5px;
+      margin: 4px 0 0;
+      color: #222;
+      line-height: 1.48;
+    }
+
+    /* ── Print ── */
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; padding: 16px 22px 24px; max-width: 100%; }
+      a { color: #444; text-decoration: none; border-bottom: none !important; }
+      h2 { break-after: avoid; }
+      .strand-title { break-after: avoid; }
+      .entry { break-inside: auto; }
+      li { break-inside: avoid; }
+      /* Keep an entry heading and its role/date line with the content that follows. */
+      h3, .meta { break-after: avoid; }
+      .desc { break-before: avoid; }
+      /* Modest print-only tightening so the CV lands on three full pages rather than spilling a
+         near-empty fourth. Screen view keeps the looser spacing above. */
+      li { margin: 2px 0; line-height: 1.42; }
+      li + li { margin-top: 3px; }
+      section { margin-top: 16px; }
+      h2 { margin-bottom: 8px; }
+      .entry { margin-bottom: 11px; }
+      .strand { margin-top: 7px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── Header ── -->
+  <div class="cv-header">
+    <h1>Haosen Cao</h1>
+    <div class="cv-label">Curriculum Vitae<span class="updated">Last updated: September 2026</span></div>
+    <!-- 2026-09-01: phone number removed. The CV is now served publicly at
+         llloydretro2.github.io as the link carried in outreach emails (the playbook
+         forbids attachments on a first email), and a phone number on a public page is
+         scraped. PhD application CVs conventionally omit it in any case — email is the
+         channel, and portals collect a phone separately in their own forms.
+         Deleted value, in case it is ever needed back: (530) 702-1144 -->
+    <div class="contact">
+      <span>Los Angeles, CA</span>
+      <span><a href="mailto:haosenca@usc.edu">haosenca@usc.edu</a></span>
+      <span><a href="mailto:lloydretro2@gmail.com">lloydretro2@gmail.com</a></span>
+      <span><a href="https://www.linkedin.com/in/haosen-cao-115936347/">LinkedIn</a></span>
+      <span><a href="https://github.com/llloydretro2">GitHub</a></span>
+    </div>
+  </div>
+
+  <!-- ── Education ── -->
+  <!-- NOTE: Education now leads the CV. Publications-first is a faculty convention;
+       for a student applicant the degree record is the expected anchor. -->
+  <section>
+    <h2>Education</h2>
+
+    <div class="entry">
+      <h3>University of Southern California</h3>
+      <div class="meta">
+        <!-- Degree name and GPA taken from USC Transcript.pdf (Registrar, downloaded Jun 5 2026):
+             "Major/Program: Master of Science in Computer Science", Graduate cumulative GPA 3.73
+             over 24.0 GPA units. Previously read "Master of Engineering" and "GPA 3.8". -->
+        <span>Master of Science, Computer Science &nbsp;|&nbsp; <b>GPA: 3.73 / 4.0</b></span>
+        <span class="meta-right">Jan 2025 – Dec 2026 (expected) &nbsp;·&nbsp; Los Angeles, CA</span>
+      </div>
+      <!-- Coursework list rebuilt from the transcript. It previously named "Foundations of
+           Artificial Intelligence" and "Computer Networks", neither of which appears on the
+           record, and omitted CSCI&nbsp;572 and CSCI&nbsp;543 — the two courses closest to the stated
+           research interests. -->
+      <div class="desc">Relevant coursework: Information Retrieval and Web Search Engines (CSCI&nbsp;572), Database Systems (CSCI&nbsp;585), Foundations of Modern Data Management and Processing (CSCI&nbsp;543), Analysis of Algorithms (CSCI&nbsp;570), Web Technologies (CSCI&nbsp;571), Software Engineering (CSCI&nbsp;577a).</div>
+    </div>
+
+    <div class="entry">
+      <h3>University of California, Davis</h3>
+      <div class="meta">
+        <!-- Dates corrected from "Sep 2019 – Jun 2024". UCD Transcript.pdf records
+             "ADMITTED: FALL QUARTER 2020", with no enrolled term before Fall 2020; the 24 transfer
+             units are AP credit, not credit from another institution. Degree awarded 13-JUN-24.
+             Minor confirmed by "MAJOR(S): COMPUTER SCIENCE  MINOR(S): JAPANESE". -->
+        <span>Bachelor of Science, Computer Science &nbsp;|&nbsp; Minor in Japanese &nbsp;|&nbsp; <b>GPA: 3.54 / 4.0</b></span>
+        <span class="meta-right">Sep 2020 – Jun 2024 &nbsp;·&nbsp; Davis, CA</span>
+      </div>
+      <!-- Verified against UCD Transcript.pdf (UC cumulative GPA 3.542, B.S. awarded 13-JUN-24).
+           "Data Visualization" corrected to the official title of ECS&nbsp;163, "Information Interfaces". -->
+      <div class="desc">Relevant coursework: Machine Learning (ECS&nbsp;171), Algorithm Design &amp; Analysis (ECS&nbsp;122A), Operating Systems (ECS&nbsp;150), Computer Architecture (ECS&nbsp;154A), Programming Languages (ECS&nbsp;140A), Theory of Computation (ECS&nbsp;120), Information Interfaces (ECS&nbsp;163).</div>
+    </div>
+  </section>
+
+  <!-- ── Research Interests ── -->
+  <!-- NOTE: narrowed from five headings to three. The two dropped headings
+       (Machine Learning & Multimodal Understanding; Algorithm Design & Combinatorial Optimization)
+       were supported only by coursework and one 2023 summer RA position; a five-item list
+       reads as an undecided direction. Multimodal work is now covered under the second heading. -->
+  <section>
+    <h2>Research Interests</h2>
+    <div class="interests">
+      <span>Information Retrieval &amp; Ranking Systems</span>
+      <span>Evaluation, Reliability &amp; Attribution of LLM-Based Systems</span>
+      <span>Database Systems &amp; Query Processing</span>
+    </div>
+  </section>
+
+  <!-- ── Publications ── -->
+  <section>
+    <h2>Publications &amp; Preprints</h2>
+    <div class="entry">
+      <!-- Citation verified against arxiv.org/abs/2603.17445 and the export API, 2026-08-18.
+           Live record: v1 posted 2026-03-18, current v5 2026-08-01; title ends "Multi-Agent
+           Auditing" (was "Attribution" in v1); seven authors, Yudi Zhang sixth, ahead of Yue Zhao;
+           primary cs.AI with a cs.CL cross-list, added here 2026-08-18.
+           The record carries no comments field, so it does not itself evidence a venue or review
+           status. "Under review" below rests on the author's own statement, confirmed 2026-08-18
+           (v1 was submitted double-blind to COLM 2026). Re-confirm before each deadline: if the
+           paper is accepted, replace the line with the venue; if rejected, drop it.
+           Contributions bullet: "robustness evaluation under paraphrase and insertion perturbation"
+           corrected 2026-08-18 to the perturbations the paper actually evaluates — identity removal,
+           boundary corruption, and PII redaction. The paper's text contains no insertion experiment,
+           and "paraphrase" appears in it only as a citation to SemStamp. -->
+      <p class="desc">
+        Yi Nian, <strong>Haosen Cao</strong>, Shenzhe Zhu, Henry Peng Zou, Qingqing Luan, Yudi Zhang, Yue Zhao.
+        "When Only the Final Text Survives: Implicit Execution Tracing for Multi-Agent Auditing."
+        <em>arXiv:2603.17445 [cs.AI, cs.CL]</em>, 2026. <strong>Under review.</strong>
+        &nbsp;<a href="https://arxiv.org/abs/2603.17445" style="font-size:11.5px;">arxiv.org/abs/2603.17445</a>
+      </p>
+      <ul>
+        <li>Proposed Implicit Execution Tracing (IET), a provenance-by-design framework embedding agent-specific, key-conditioned statistical signals into token generation, so that the final text becomes a self-verifying provenance record: an offline auditor holding a registry of per-agent keys recovers segment boundaries and per-segment attribution from that text alone, without execution logs or private traces.</li>
+        <li><em>Contributions:</em> the multi-agent attribution experiments and benchmarking against watermarking baselines; robustness evaluation under identity removal, boundary corruption, and privacy-preserving redaction; ablation studies on attribution accuracy, segment overlap, and transition-structure recovery.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Research Experience ── -->
+  <!-- Rewritten Aug 17 2026 for register and length: 55 bullets -> 26. Removed ticket-level items
+       (file-format ingestion, a production deployment, a migration review, API documentation, a
+       column audit), organizational bullets (responsibility boundaries, delivery contracts, the
+       specification-review process), and corollaries now folded into the claim they follow;
+       per-defect bullets are consolidated into the class they belong to. Register: state the
+       contribution declaratively, name a mechanism rather than argue it, and avoid narrating
+       process. Do not reintroduce administrative verbs (handled, raised, closed, led, negotiated,
+       shipped, delivered, verified that). -->
+  <section>
+    <h2>Research Experience</h2>
+
+    <div class="entry">
+      <h3>University of Southern California, Viterbi School of Engineering</h3>
+      <div class="meta">
+        <span class="role">Research Assistant &nbsp;·&nbsp; Advised by Prof. Yue Zhao and Prof. Mengyuan Li</span>
+        <span class="meta-right">Jul 2026 – Present &nbsp;·&nbsp; Los Angeles, CA</span>
+      </div>
+      <div class="desc">Retrieval and ranking for two-sided matching, on the same production system as the industry work below; the entries here concern architecture, methodology, and controlled study.</div>
+
+      <div class="strand">
+        <div class="strand-title">Employer-Side Matching Architecture</div>
+        <ul>
+          <li>Designed a three-layer architecture for job-to-candidate matching — hard filtering, coarse retrieval over a whole-profile embedding, then per-field cosine scoring with weighted summation — in which both sides decompose into field blocks under a shared template and the ranking layer emits a per-field score profile rather than a scalar, rendering every ranking decision attributable to the passage that produced it.</li>
+          <li>Established per-field standardization as a precondition for interpretable weighting, since a field's influence on the ordering scales with the product of its weight and its own dispersion; statistics are estimated offline over the full library, preserving comparability across queries and admitting incremental extension of a result set.</li>
+          <li>Rejected rank-reciprocal fusion within the ranking layer on the grounds that its premise — combining scorers without a common scale — does not obtain there, and that rank substitution discards effect magnitude.</li>
+          <li>Formalized missing-value semantics as renormalization over observed fields rather than zero-imputation, distinguishing absence of requirement on the posting side from absence of evidence on the candidate side.</li>
+          <li>Constrained the filtering stage to predicates expressible within the retrieval query, separating non-negotiable qualifications from relaxable ranges, and excluded health and physical-condition attributes from the schema as a compliance boundary.</li>
+          <li>Specified the resulting score matrix as the interface for two downstream uses: attribution of employer preference into weight adjustments, and per-candidate gap identification for targeted follow-up.</li>
+        </ul>
+      </div>
+
+      <div class="strand">
+        <div class="strand-title">Multimodal Assessment of Asynchronous Interviews</div>
+        <ul>
+          <li>Designed and implemented a staged pipeline reducing a single recording — camera and screen capture, without operating-system instrumentation — to timestamped structured records in which every assertion carries a verifiable source in the transcript or an identified frame.</li>
+          <li>Adopted dual-granularity segmentation on the observation that the resolution at which a citation is verifiable differs from that at which a description is coherent; evaluated the pipeline on requirement coverage, citation verifiability, and event-to-frame traceability.</li>
+          <li>Bounded the system's claim to verifying consistency between assertion and demonstrated behavior rather than grading performance, on the basis of a calibration study finding negligible correlation between model judgments of fine-grained quality and human annotation.</li>
+          <li>Surveyed the legal and adversarial boundary of the approach: provider constraints on workplace affect inference, biometric-privacy exposure, and prompt injection delivered through shared screen content.</li>
+        </ul>
+      </div>
+
+      <div class="strand">
+        <div class="strand-title">Controlled Study of the Retrieval Embedding Layer</div>
+        <ul>
+          <li>Conducted controlled ablations, each with a length- and format-matched control arm, to determine which structured fields carry signal in the indexed representation; a rule-based extractor recovered most of the benefit of an LLM-based one without additional latency.</li>
+          <li>Demonstrated that query and document embeddings drawn from different models cannot be mixed — retrieval degrades to chance while surface indicators remain nominal — establishing atomicity as a requirement for model migration.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <h3>Figwork</h3>
+      <div class="meta">
+        <span class="role">Research Intern &nbsp;·&nbsp; Retrieval &amp; Ranking</span>
+        <span class="meta-right">Jun 2026 – Present &nbsp;·&nbsp; Remote</span>
+      </div>
+      <div class="desc">Retrieval and ranking layer of a deployed LLM job-matching system serving a browser-extension product: Python with FastAPI and SQLAlchemy over PostgreSQL with pgvector HNSW indexes, Vertex AI embedding and generation models, on Compute Engine, Cloud Run, and Cloud SQL.</div>
+      <ul>
+        <li>Reconstructed the system's architecture from source, live services, and database state following the departure of its author, correcting inverted environment records in the inherited documentation.</li>
+        <li>Characterized a class of silent ranking failures — insufficient approximate-nearest-neighbor search width, rank fusion counting configured rather than productive retrieval routes, score filters that never reorder, token-boundary truncation, and a configuration path admitting query and document embeddings from disjoint spaces — each degrading result quality while surface metrics and confidence scores remained nominal.</li>
+        <li>Designed and deployed a multi-field candidate filtering layer separating predicates admissible within the retrieval query from those requiring soft weighting, with fail-open semantics under missing source data.</li>
+        <li>Established the team's evaluation infrastructure: a corpus of authentic resumes, a cross-vendor judge ensemble chosen against shared model bias, reproducible relevance scorecards, and a full-route post-deployment suite adopted as the release gate.</li>
+        <li>Instituted a same-session A/B protocol after measuring cross-day judge drift exceeding the effects under test, and calibrated the ensemble's reliability to bound the granularity of admissible conclusions.</li>
+        <li>Reversed a standing assumption concerning the lexical retrieval path through controlled live experiments, attributing its negative contribution to the fragmentation of a controlled vocabulary under full-text indexing.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <h3>Huazhong University of Science and Technology</h3>
+      <div class="meta">
+        <span class="role">Undergraduate Research Assistant &nbsp;·&nbsp; School of Computer Science</span>
+        <span class="meta-right">Jul 2023 – Aug 2023 &nbsp;·&nbsp; Wuhan, China</span>
+      </div>
+      <ul>
+        <li>Investigated the NP-hard k-coloring problem in C, comparing local search, tabu search, and hybrid evolutionary metaheuristics on large sparse graphs.</li>
+        <li>Obtained 500-color solutions for graphs of 10,000 edges within 60 seconds on average — a threefold improvement over the baseline — through tuning of neighborhood structure and candidate-list strategy.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <h3>Mobvoi (出门问问)</h3>
+      <div class="meta">
+        <span class="role">Algorithm Engineer &nbsp;·&nbsp; Text-to-Image Generation Group</span>
+        <span class="meta-right">Aug 2024 – Dec 2024 &nbsp;·&nbsp; Suzhou, China</span>
+      </div>
+      <ul>
+        <li>Benchmarked three text-to-image diffusion models across aesthetic quality, prompt fidelity, style consistency, and diversity, and formulated a composite metric integrating FID, CLIP score, aesthetic scoring, and prompt consistency for checkpoint selection.</li>
+        <li>Built an internal annotation platform that materially increased the team's daily yield of validated samples, supporting checkpoint evaluation and style-conditioned data curation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Projects ── -->
+  <!-- CPU Cache System Design (Logisim, UC Davis ECS&nbsp;154A, 2022) removed Aug 17 2026:
+       a sophomore-level course exercise, outweighed by everything above it. -->
+  <section>
+    <h2>Selected Projects</h2>
+
+    <div class="entry">
+      <h3>Adaptive Cuckoo Hash Join in DuckDB</h3>
+      <div class="meta">
+        <span>C++ &nbsp;·&nbsp; USC CSCI&nbsp;543 – Foundations of Modern Data Management and Processing</span>
+        <span class="meta-right">Jan 2026 – Apr 2026</span>
+      </div>
+      <ul>
+        <li>Implemented a selectable cuckoo hash join backend within DuckDB's execution engine, extended to an adaptive hybrid with BFS relocation, block-structured buckets, stash overflow handling, and fallback to linear probing under load.</li>
+        <li>Validated against the Join Order Benchmark and TPC-DS, characterizing the trade-off between probing cost, relocation overhead, and memory locality.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <h3>California EV Adoption Data Visualization</h3>
+      <div class="meta">
+        <span>JavaScript, D3.js &nbsp;·&nbsp; UC Davis ECS&nbsp;163</span>
+        <span class="meta-right">Jan 2024 – Mar 2024</span>
+      </div>
+      <p class="desc">Narrative visualization of California EV adoption from 2010 to 2023 through brushable timelines, choropleth maps, and linked scatterplots.</p>
+    </div>
+
+    <div class="entry">
+      <h3>WS Toolbox &nbsp;(<a href="https://www.cardtoolbox.org/" style="font-weight:normal;color:#555;font-size:12px;">cardtoolbox.org</a>)</h3>
+      <div class="meta">
+        <span>React.js, Node.js, Express, MongoDB</span>
+        <span class="meta-right">Apr 2025 – Present</span>
+      </div>
+      <p class="desc">Full-stack management tool for the trading card game Weiss Schwarz: a RESTful backend over 58,000+ card records in MongoDB, a responsive React.js interface, and cloud deployment with environment isolation.</p>
+    </div>
+  </section>
+
+  <!-- ── Skills ── -->
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skill-row"><b>Programming Languages:</b> Python, C, C++, Java, JavaScript, TypeScript, SQL, R, HTML/CSS</div>
+    <div class="skill-row"><b>Systems &amp; Databases:</b> PostgreSQL (pgvector, HNSW), DuckDB, MongoDB, SQLite, Linux, Docker, CMake, Git</div>
+    <div class="skill-row"><b>ML &amp; Data:</b> PyTorch, scikit-learn, NumPy, pandas, D3.js</div>
+    <div class="skill-row"><b>Methods:</b> embedding-based retrieval, rank fusion, LLM-as-judge evaluation and calibration, controlled A/B experiment design, ablation studies</div>
+    <div class="skill-row"><b>Frameworks &amp; Cloud:</b> FastAPI, SQLAlchemy, React.js, Node.js, Express; Google Cloud Platform (Vertex AI, Compute Engine, Cloud Run, Cloud SQL)</div>
+    <div class="skill-row"><b>Languages:</b> English (Fluent), Chinese (Native), Japanese (Basic)</div>
+  </section>
+
+  <!-- No Awards / Teaching / Talks sections: the author confirmed he has none of these. -->
+
+  <!-- ── Extracurricular ── -->
+  <section>
+    <h2>Leadership &amp; Service</h2>
+    <div class="entry">
+      <h3>UC Davis Picnic Day 2022</h3>
+      <div class="meta">
+        <span class="role">Technical Vice Director</span>
+        <span class="meta-right">Feb 2022 – May 2022 &nbsp;·&nbsp; Davis, CA</span>
+      </div>
+      <p class="desc">Designed the official event website and coordinated 50+ audio equipment sets across five departments for on-site and presentation venues, for UC Davis's annual open-house event (~80,000 attendees).</p>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
