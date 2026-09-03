@@ -1,6 +1,6 @@
-# llloydretro2.github.io
+# cv — academic CV site
 
-Serves the academic CV at <https://llloydretro2.github.io>, used as the CV link in
+Serves the academic CV at <https://llloydretro2.github.io/cv/>, used as the CV link in
 PhD-application outreach emails (the outreach playbook forbids attachments on a first
 email, so the CV has to be a URL).
 
@@ -28,6 +28,9 @@ git add -A && git commit -m "Update CV" && git push
 ```
 
 `.nojekyll` stops GitHub Pages from running the files through Jekyll.
+
+This is a **project** repo, not a user site (`llloydretro2.github.io` was already taken),
+so GitHub Pages has to be switched on by hand: Settings → Pages → Source = `main`, `/ (root)`.
 
 This repo lives outside OneDrive on purpose — OneDrive syncing a `.git` directory
 corrupts it.
