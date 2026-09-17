@@ -163,13 +163,15 @@
       h3, .meta { break-after: avoid; }
       .desc { break-before: avoid; }
       /* Modest print-only tightening so the CV lands on three full pages rather than spilling a
-         near-empty fourth. Screen view keeps the looser spacing above. */
-      li { margin: 2px 0; line-height: 1.42; }
-      li + li { margin-top: 3px; }
-      section { margin-top: 16px; }
-      h2 { margin-bottom: 8px; }
-      .entry { margin-bottom: 11px; }
-      .strand { margin-top: 7px; }
+         near-empty fourth. Screen view keeps the looser spacing above.
+         2026-09-17: tightened a second notch after two bullets were added back (Mobvoi model
+         training, USC embedding fine-tuning) pushed the export to four pages. Print-only. */
+      li { margin: 2px 0; line-height: 1.39; }
+      li + li { margin-top: 2px; }
+      section { margin-top: 14px; }
+      h2 { margin-bottom: 7px; }
+      .entry { margin-bottom: 10px; }
+      .strand { margin-top: 6px; }
     }
   </style>
 </head>
@@ -289,6 +291,8 @@
         <ul>
           <li>Conducted controlled ablations, each with a length- and format-matched control arm, to determine which structured fields carry signal in the indexed representation; a rule-based extractor recovered most of the benefit of an LLM-based one without additional latency.</li>
           <li>Demonstrated that query and document embeddings drawn from different models cannot be mixed — retrieval degrades to chance while surface indicators remain nominal — establishing atomicity as a requirement for model migration.</li>
+          <li>
+          Fine-tuning the retrieval embedding model on in-domain data.</li>
         </ul>
       </div>
     </div>
@@ -302,7 +306,8 @@
       <div class="desc">Retrieval and ranking layer of a deployed LLM job-matching system serving a browser-extension product: Python with FastAPI and SQLAlchemy over PostgreSQL with pgvector HNSW indexes, Vertex AI embedding and generation models, on Compute Engine, Cloud Run, and Cloud SQL.</div>
       <ul>
         <li>Reconstructed the system's architecture from source, live services, and database state following the departure of its author, correcting inverted environment records in the inherited documentation.</li>
-        <li>Characterized a class of silent ranking failures — insufficient approximate-nearest-neighbor search width, rank fusion counting configured rather than productive retrieval routes, score filters that never reorder, token-boundary truncation, and a configuration path admitting query and document embeddings from disjoint spaces — each degrading result quality while surface metrics and confidence scores remained nominal.</li>
+        <li>
+        Characterized and repaired a class of silent ranking failures — insufficient approximate-nearest-neighbor search width, rank fusion counting configured rather than productive retrieval routes, score filters that never reorder, token-boundary truncation, and a configuration path admitting query and document embeddings from disjoint spaces — each degrading result quality while surface metrics and confidence scores remained nominal.</li>
         <li>Designed and deployed a multi-field candidate filtering layer separating predicates admissible within the retrieval query from those requiring soft weighting, with fail-open semantics under missing source data.</li>
         <li>Established the team's evaluation infrastructure: a corpus of authentic resumes, a cross-vendor judge ensemble chosen against shared model bias, reproducible relevance scorecards, and a full-route post-deployment suite adopted as the release gate.</li>
         <li>Instituted a same-session A/B protocol after measuring cross-day judge drift exceeding the effects under test, and calibrated the ensemble's reliability to bound the granularity of admissible conclusions.</li>
@@ -329,6 +334,8 @@
         <span class="meta-right">Aug 2024 – Dec 2024 &nbsp;·&nbsp; Suzhou, China</span>
       </div>
       <ul>
+        <li>
+        Trained and fine-tuned a family of style-specific text-to-image diffusion models, together with the scoring models used to select among their checkpoints.</li>
         <li>Benchmarked three text-to-image diffusion models across aesthetic quality, prompt fidelity, style consistency, and diversity, and formulated a composite metric integrating FID, CLIP score, aesthetic scoring, and prompt consistency for checkpoint selection.</li>
         <li>Built an internal annotation platform that materially increased the team's daily yield of validated samples, supporting checkpoint evaluation and style-conditioned data curation.</li>
       </ul>
