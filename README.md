@@ -6,25 +6,23 @@ email, so the CV has to be a URL).
 
 ## ⚠️ Do not edit `index.html` here
 
-It is a **copy**. The maintained source is:
+It is a **build artifact**. The maintained source is:
 
     <OneDrive>/简历/phd/materials/cv.html
+
+That source carries maintenance comments that must not be published, so never copy it
+here by hand. `build.sh` strips every comment.
 
 To publish a CV change:
 
 1. edit `materials/cv.html` in the phd working directory
-2. re-export `materials/Haosen Cao - CV.pdf` (headless Chrome, see below)
-3. copy both into this repo and push
+2. run `./build.sh`, which re-exports the PDF and rebuilds `index.html`
+3. review the diff, then commit and push
 
 ```bash
-PHD="$HOME/Library/CloudStorage/OneDrive-个人/简历/phd"
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-  --headless --disable-gpu --no-pdf-header-footer \
-  --print-to-pdf="$PHD/materials/Haosen Cao - CV.pdf" \
-  "file://$PHD/materials/cv.html"
-cp "$PHD/materials/cv.html" index.html
-cp "$PHD/materials/Haosen Cao - CV.pdf" Haosen-Cao-CV.pdf
-git add -A && git commit -m "Update CV" && git push
+./build.sh
+git diff index.html
+git add index.html Haosen-Cao-CV.pdf && git commit -m "Update CV" && git push
 ```
 
 `.nojekyll` stops GitHub Pages from running the files through Jekyll.
